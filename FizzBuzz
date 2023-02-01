@@ -1,0 +1,18 @@
+$contadorWhile = 1
+while ($contadorWhile -lt 101){
+
+$moduloFizz = $contadorWhile % 3
+$moduloBuzz = $contadorWhile % 5
+$moduloFizzBuzz = $contadorWhile % 15
+
+if ($moduloFizzBuzz -eq 0){
+echo "FizzBuzz"
+}elseif($moduloBuzz -eq 0){
+    echo "Buzz"
+    }elseif ($moduloFizz -eq 0){
+        echo "Fizz"
+        }else{
+            echo $contadorWhile
+            }
+    $contadorWhile++
+}
