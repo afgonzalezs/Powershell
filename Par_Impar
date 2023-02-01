@@ -1,0 +1,20 @@
+$contadorWhile = 0
+
+while( $contadorWhile -lt 1){
+
+$numeroUsuario=read-Host "Bienvenido. Por favor ingrese un número entero para saber si dicho número es par o impar"
+
+$moduloUsuario = $numeroUsuario%2
+
+if ($moduloUsuario -eq 0){
+
+    echo "$numeroUsuario es par."
+
+}else{
+
+    echo "$numeroUsuario es impar."
+
+}
+
+$contadorWhile--
+}
