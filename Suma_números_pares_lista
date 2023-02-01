@@ -1,0 +1,19 @@
+[System.Collections.ArrayList]$numeros = @()
+
+for ($contadorFor = 1; $contadorFor -le 10; $contadorFor++){
+$numeros.Add($contadorFor)
+}
+function sumaParesDelArreglo($arregloSumar){
+$resultado = 0
+for ([int]$contadorForFuncion = 0; $contadorForFuncion -lt 10; $contadorForFuncion++){
+$posicion = $arregloSumar[[int]$contadorForFuncion]
+$esPar = ($posicion) % 2
+if ($esPar -eq 0){
+$resultado = $resultado + $posicion
+}
+}
+echo "`nEl arreglo es $arregloSumar."
+
+echo "`nEl resultado de la suma de los números pares del arreglo es $resultado."
+}
+sumaParesDelArreglo($numeros)
