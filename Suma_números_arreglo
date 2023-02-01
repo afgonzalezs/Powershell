@@ -1,0 +1,15 @@
+[System.Collections.ArrayList]$numeros = @()
+
+for ($contadorFor = 1; $contadorFor -le 10; $contadorFor++){
+$numeros.Add($contadorFor)
+}
+function sumaDelArreglo($arregloSumar){
+$resultado = 0
+for ([int]$contadorForFuncion = 0; $contadorForFuncion -lt 10; $contadorForFuncion++){
+$resultado = $resultado + $arregloSumar[[int]$contadorForFuncion]
+}
+echo "`nEl arreglo es $arregloSumar."
+
+echo "`nEl resultado de la suma del arreglo es $resultado."
+}
+sumaDelArreglo($numeros)
