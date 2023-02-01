@@ -1,0 +1,20 @@
+[System.Collections.ArrayList]$numeros = @()
+
+for ($contadorFor = 1; $contadorFor -le 10; $contadorFor++){
+$numeros.Add($contadorFor)
+}
+function estaEnElArreglo([int]$numeroBuscar){
+
+if ($numeros.contains($numeroBuscar)){
+echo "$numeroBuscar se encuentra en el arreglo`n"
+}else{
+echo "$numeroBuscar no se encuentra en el arreglo`n"
+}
+}
+
+$contadorWhile = 0
+
+while ($contadorWhile -lt 1){
+$numeroUsuario = Read-Host "Bienvenido. Por favor ingrese un número entero para saber si dicho número se encuentra en el arreglo`n"
+estaEnElArreglo($numeroUsuario)
+}
